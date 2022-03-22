@@ -39,6 +39,7 @@ function changeColor(){
 function changeJumbotron() {
     let jumbotronNode = document.querySelector(".jumbotron")
     jumbotronNode.style.background = "green"
+    jumbotronNode.style.setProperty("background-color", "black", "important")
 }
 changeJumbotron()
 
@@ -54,11 +55,21 @@ removelist()
 
 // EX15) Write a function to change the column size for heading in jumbotron
 function changeHeading() {
-    
+    let jumbotronNode2 = document.querySelector(".col-md-6")
+    jumbotronNode2.classList.remove("col-md-6")
+    jumbotronNode2.classList.add("col-md-12")
+
+
 }
 
+changeHeading() 
 
 
 
+// EX16) Write a function to remove the "Search" magnifying glass icon
 
-
+function removeSearchIcon() {
+    let searchNode = document.querySelector("svg")
+    searchNode.classList.add("hidden")
+}
+removeSearchIcon()
