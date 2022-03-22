@@ -6,7 +6,7 @@
 
  /* EX2) Write a selector to target every children of the navbar */
 
- .container .blog-header .row div a {
+ .nav-scroller nav a {
      background-color: aqua;
  }
 
@@ -62,4 +62,20 @@ a[href="https://twitter.com/mdo"] + p>a{
 
 footer {
     background-color: aquamarine;
+}
+
+
+
+
+/* create class hidden */
+
+.hidden {
+    display: none;
+}
+
+
+
+
+.colchange {
+    width: 66%;
 }
