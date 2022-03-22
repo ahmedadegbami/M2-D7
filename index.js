@@ -52,7 +52,10 @@ function removelist(){
 removelist()
 
 
-
+// EX15) Write a function to change the column size for heading in jumbotron
+function changeHeading() {
+    
+}
 
 
 
