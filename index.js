@@ -13,6 +13,9 @@
       */
 
 // EX11) Write a function to add a new link into the navbar
+
+
+
 function addNewlink(){
 let navbarNode = document.querySelector("nav")
 
@@ -73,3 +76,85 @@ function removeSearchIcon() {
     searchNode.classList.add("hidden")
 }
 removeSearchIcon()
+
+// // EX17) Write a function to trim just the first 50 characters in 
+// the first paragraph for each blog post
+
+function trimFirstPara(){
+    let firstParaNode = document.querySelectorAll(".blog-post p:nth-child(5) ")
+    for ( let para of firstParaNode){
+        
+        para.innerText = para.innerText.substring(50)
+        
+        
+    }
+}
+trimFirstPara()
+
+
+// function trimFirstPara(){
+//     let firstParaNode = document.querySelectorAll(".blog-post p:nth-child(5) ")
+//     console.log(firstParaNode)
+//     for ( let i=0; i < firstParaNode.length; i++){
+
+//     firstParaNode[i].innerText = firstParaNode[i].innerText.substring(10)
+        
+//     }
+// }
+// trimFirstPara()
+
+
+// EX18) Write a function and attach it to the 
+// "Newer" button, to add new Blog Post (just div and title)
+
+function addnewPOST() {
+    let newButtonNode = document.querySelectorAll(".blog-pagination a")[1]
+    newButtonNode.classList.remove("disabled")
+    newButtonNode.removeAttribute("href")
+    newButtonNode.addEventListener("click",function(){
+        let blog = `<div class="blog-post">
+            <h2 class="blog-post-title">Sample blog post</h2></div>`
+        let blogMainNode = document.querySelector(".blog-main")
+        blogMainNode.innerHTML += blog
+        
+})
+}
+
+
+addnewPOST()
+
+
+// EX19) Write a function and attach it to the "Older" button, 
+// to remove the last Blog Post
+
+function removeLastPost() {
+
+    let lastButtonNode = document.querySelectorAll(".blog-pagination a")[0]
+    
+    lastButtonNode.addEventListener("click",function(){
+        let blogNode = document.querySelectorAll(".blog-post")
+        blogNode[blogNode.length-1].remove()
+})
+}
+
+removeLastPost() 
+
+
+// EX20) Write an alert with the name of the author every time the user hover 
+// with the mouse over an author name
+
+function alertAuthorName() {
+    let authorNode = document.querySelectorAll(" .blog-post-meta >a")
+
+   
+    for (let i = 0; i < authorNode.length; i++){
+        authorNode[i].addEventListener("mouseover", function(e){
+            alert(e.target.innerText)
+
+        })
+    }
+
+    }
+
+
+alertAuthorName()

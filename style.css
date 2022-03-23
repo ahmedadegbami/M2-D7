@@ -76,3 +76,11 @@ footer {
 
 
 
+.blog-post p:nth-child(5) {
+    background-color: brown;
+}
+
+
+.blog-post-meta a{
+    background-color: red;
+}
